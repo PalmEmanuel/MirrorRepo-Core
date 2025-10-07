@@ -34,7 +34,7 @@ jobs:
         shell: pwsh
         env:
           TOKEN: ${{ steps.get-installation-token.outputs.token }}
-        run: |
+        run: | # powershell
           $Headers = @{
             Accept = "application/vnd.github+json"
             Authorization = "Bearer ${{ env.TOKEN }}"
