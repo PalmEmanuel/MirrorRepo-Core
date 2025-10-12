@@ -23,7 +23,7 @@ runs:
     - name: Create Installation Token
       id: get-installation-token
       shell: pwsh
-      run: |
+      run: | # powershell
         Set-Location '${{ github.action_path }}'
         $JWT = ./New-JWT.ps1 -ClientId '${{ inputs.clientId }}' -PrivateKey '${{ inputs.privateKey }}'
         
