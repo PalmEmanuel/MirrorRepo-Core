@@ -23,7 +23,7 @@ jobs:
       - name: Comment on Issue
         uses: ./.github/actions/comment-issue
         with:
-          token: ${{ secrets.GITHUB_TOKEN }} # Replace with installation token
+          token: ${{ steps.get-installation-token.outputs.token }}
           issue_number: ${{ github.event.issue.number }}
           repository: ${{ github.repository }}
           body: |
